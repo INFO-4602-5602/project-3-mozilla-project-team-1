@@ -6,7 +6,7 @@ var tip = d3.tip()
   .offset([-10, 0])
   .html(function(d) {
     return "<strong>Country: </strong><span class='details'>" + d.properties.name + "<br></span>" + "<strong>Population: </strong><span class='details'>" + format(d.population) + "</span>";
-  })
+  });
 
 var margin = {
     top: 0,
@@ -39,8 +39,8 @@ var path = d3.geoPath().projection(projection);
 svg.call(tip);
 
 queue()
-  .defer(d3.json, "world_countries.json")
-  .defer(d3.tsv, "world_population.tsv")
+  .defer(d3.json, "js/world_countries.json")
+  .defer(d3.tsv, "js/world_population.tsv")
   .await(ready);
 
 function ready(error, data, population) {
