@@ -53,6 +53,25 @@ function ready(error, data, population) {
     d.population = populationById[d.id]
   });
 
+  var start = d3.max([1, d3.min(data, function(d) {
+    return d.population;
+  })]);
+  var end = 1 + d3.max(data, function(d) {
+    return d.population;
+  });
+
+  console.log(start);
+  console.log(end);
+
+  // Log Scale, starting number had to be greater than or equal to 1 to not break color coding
+  const logScale = d3.scaleLog()
+    .domain([start, end]);
+  const colorScaleLog = d3.scaleSequential(
+    (d) => {
+      return d3.interpolateOranges(logScale(d))
+    }
+  );
+
   svg.append("g")
     .attr("class", "countries")
     .selectAll("path")
@@ -60,7 +79,8 @@ function ready(error, data, population) {
     .enter().append("path")
     .attr("d", path)
     .style("fill", function(d) {
-      return color(populationById[d.id]);
+      return colorScaleLog(populationById[d.id]);
+      //return color(populationById[d.id]);
     })
     .style('stroke', 'white')
     .style('stroke-width', 1.5)
