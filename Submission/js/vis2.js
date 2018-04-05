@@ -42,10 +42,10 @@ var svg = d3v3.select("#chart_2").append("svg")
     .attrTween('d', function(d) {
         var i = d3v3.interpolate(d.startAngle+0.1, d.endAngle);
         return function(t) {
-            d.endAngle = i(t); 
+            d.endAngle = i(t);
             return arc(d)
             }
-        }); 
+        });
   g.append("text")
       .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
       .attr("dy", ".35em")
@@ -59,15 +59,14 @@ var svg = d3v3.select("#chart_2").append("svg")
           div.style("display", "inline-block");//.attr("transform", "translate(" + 1000 + "," + 1000 + ")");
     div.html((d.data.name)+"<br>"+(d.data.total) + "<br>"+(d.data.percent) + "%");
 });
-      
+
 d3v3.selectAll("path").on("mouseout", function(d){
     div.style("display", "none");
 });
-      
-      
+
+
 //d3v3.select("body").transition().style("background-color", "#d3v3");
 function type(d) {
   d.total = +d.total;
   return d;
 }
-
