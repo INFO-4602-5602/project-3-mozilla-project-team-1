@@ -26,6 +26,8 @@ def vis_2():
     #vis_2 = vis_2.fillna(0) # remove 2016-2017 NaN
     vis_2.to_csv("vis_2.csv")
 
+    
+
 '''def vis_3():
 
     # VISUALIZATION 3
