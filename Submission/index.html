@@ -70,7 +70,7 @@
     </div>
 
     <!-- Visualization #4 -->
-    <div id="bg4">
+    <div id="bg4" class="bipartite">
       <div class="container visDiv">
         <h2 class="text-center">Chart 4</h2>
 
@@ -86,22 +86,38 @@
     <p><span class="mr-5">Jiawei Liu</span><span class="mr-5">Keke Wu</span><span class="mr-5">Wei Miao</span><span class="mr-5">Xu Han</span><span class="mr-5">Yawen Zhang</span> </p>
   </footer>
 
-
   <!-- bootstrap js -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
   <!-- d3.js -->
   <script src="http://d3js.org/d3.v4.min.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+  <!-- bipartite.js -->
+  <script type="text/javascript" src="js/biPartite.js"></script>
+  <script type="text/javascript" src="js/biPartite-plot.js"></script>
 
   <!-- Visualization scripts -->
   <script type="text/javascript" src="js/vis_1.js"></script>
   <script type="text/javascript" src="js/vis_2.js"></script>
   <script type="text/javascript" src="js/vis_3.js"></script>
   <script type="text/javascript" src="js/vis_4.js"></script>
+
+  <script>
+  (function(){
+      d3.json("data/v4_data.json", function(v4_data) {
+      var plot=new biPartitePlot("bg4");
+      var data=[
+      {data: plot.partData(v4_data,2), id:'TechPrivacy', header:["Tech", "Privacy", "Tech Level & Privacy"]}
+      // ,{data: plot.partData(sales_data,3), id:'Sales', header:["Channel","State", "Sales"]}
+      ];
+      plot.draw(data);
+    });
+  })();
+  </script>
+
 </body>
 
 </html>
