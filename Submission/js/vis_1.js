@@ -17,9 +17,15 @@ var margin = {
   width = 960 - margin.left - margin.right,
   height = 500 - margin.top - margin.bottom;
 
+/*
 var color = d3.scaleThreshold()
   .domain([10000, 100000, 500000, 1000000, 5000000, 10000000, 50000000, 100000000, 500000000, 1500000000])
   .range(["rgb(247,251,255)", "rgb(222,235,247)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)", "rgb(66,146,198)", "rgb(33,113,181)", "rgb(8,81,156)", "rgb(8,48,107)", "rgb(3,19,43)"]);
+*/
+
+var color = d3.scaleThreshold()
+  .domain(d3.range(0, 1))
+  .range(d3.schemeOranges[9]);
 
 var path = d3.geoPath();
 
@@ -39,48 +45,45 @@ var path = d3.geoPath().projection(projection);
 svg.call(tip);
 
 queue()
-  .defer(d3.json, "js/world_countries.json")
-  .defer(d3.tsv, "js/world_population.tsv")
+  .defer(d3.json, "data/world_countries.json")
+  .defer(d3.csv, "data/vis_1.csv")
   .await(ready);
 
-function ready(error, data, population) {
+function ready(error, world, tech) {
+  if (error) throw error;
+  //console.log(world);
+  //console.log(tech);
+
   var populationById = {};
 
-  population.forEach(function(d) {
-    populationById[d.id] = +d.population;
-  });
-  data.features.forEach(function(d) {
-    d.population = populationById[d.id]
+  tech.forEach(function(d) {
+    populationById[d.id] = +d.AverageUserRatio;
   });
 
-  var start = d3.max([1, d3.min(data, function(d) {
-    return d.population;
-  })]);
-  var end = 1 + d3.max(data, function(d) {
-    return d.population;
+  world.features.forEach(function(d) {
+    //console.log(d.properties.name + "," + d.id);
+    d.techratio = populationById[d.id];
   });
 
-  console.log(start);
-  console.log(end);
 
-  // Log Scale, starting number had to be greater than or equal to 1 to not break color coding
-  const logScale = d3.scaleLog()
-    .domain([start, end]);
-  const colorScaleLog = d3.scaleSequential(
-    (d) => {
-      return d3.interpolateOranges(logScale(d))
-    }
-  );
+
+
+  // population.forEach(function(d) {
+  //   populationById[d.id] = +d.population;
+  // });
+  // data.features.forEach(function(d) {
+  //   d.population = populationById[d.id]
+  // });
+
 
   svg.append("g")
     .attr("class", "countries")
     .selectAll("path")
-    .data(data.features)
+    .data(world.features)
     .enter().append("path")
     .attr("d", path)
     .style("fill", function(d) {
-      return colorScaleLog(populationById[d.id]);
-      //return color(populationById[d.id]);
+      return color(populationById[d.id]);
     })
     .style('stroke', 'white')
     .style('stroke-width', 1.5)
@@ -106,7 +109,7 @@ function ready(error, data, population) {
     });
 
   svg.append("path")
-    .datum(topojson.mesh(data.features, function(a, b) {
+    .datum(topojson.mesh(world.features, function(a, b) {
       return a.id !== b.id;
     }))
     // .datum(topojson.mesh(data.features, function(a, b) { return a !== b; }))
