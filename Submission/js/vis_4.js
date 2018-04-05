@@ -22,11 +22,11 @@ biPartitePlot.prototype.partData = function(data, index){
 	return this.bP.partData(data, index);
 };
 
-d3.json("../data/vis_4.json", function(v4_data) {
+d3.json("../data/vis_4_b.json", function(v4_data) {
 	var plot = new biPartitePlot("bg4");
 	var data = [
-	{data: plot.partData(v4_data, 2), id:'TechPrivacy', header:["Tech", "Privacy", "Tech Level & Privacy"]}
-	// ,{data: plot.partData(sales_data,3), id:'Sales', header:["Channel","State", "Sales"]}
+	{data: plot.partData(v4_data, 2), id:'TechResponsibility', header:["Tech", "Res", "Tech Level & Responsibility"]}
+	//,{data: plot.partData(v4_data,2), id:'Sales', header:["Channel","State", "Sales"]}
 	];
 	plot.draw(data);
 });
