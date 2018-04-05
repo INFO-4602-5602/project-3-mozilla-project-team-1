@@ -1,3 +1,5 @@
+// Reference: https://github.com/cschen1205/js-d3-charts-made-simple
+// The biPartite chart wrapper is provided
 var  biPartite = function()
 {
 	var bP={};
@@ -10,7 +12,7 @@ var  biPartite = function()
 	var c2=[-50, 100];
 	var c3=[-10, 140]; //Column positions of labels.
 	var colors =["#3366CC", "#DC3912",  "#FF9900","#109618", "#990099", "#0099C6"];
-	
+
 	bP.partData = function(data,p){
 		var sData={};
 
