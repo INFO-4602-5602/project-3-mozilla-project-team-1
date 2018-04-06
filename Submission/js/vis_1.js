@@ -144,7 +144,7 @@ function dountTip(sub, total) {
     .call(donut);
 }
 
-//draw the donut chart
+//draw the donut donut_chart
 function donutChart() {
   var width,
     height,
@@ -155,7 +155,7 @@ function donutChart() {
       left: 10
     },
     colour = d3.scaleOrdinal(d3.schemeCategory20c), // colour scheme
-    variable, // value in data that will dictate proportions on chart
+    variable, // value in data that will dictate proportions on donut_chart
     variable_sub,
     variable_total,
     category, // compare data by
@@ -164,7 +164,7 @@ function donutChart() {
     cornerRadius, // sets how rounded the corners are on each slice
     percentFormat = d3.format(',.2%');
 
-  function chart() {
+  function donut_chart() {
     var dataset = [{
         vsub: "s1",
         value: variable_sub
@@ -217,69 +217,69 @@ function donutChart() {
   }
 
   // getter and setter functions.
-  chart.width = function(value) {
+  donut_chart.width = function(value) {
     if (!arguments.length) return width;
     width = value;
-    return chart;
+    return donut_chart;
   };
 
-  chart.height = function(value) {
+  donut_chart.height = function(value) {
     if (!arguments.length) return height;
     height = value;
-    return chart;
+    return donut_chart;
   };
 
-  chart.margin = function(value) {
+  donut_chart.margin = function(value) {
     if (!arguments.length) return margin;
     margin = value;
-    return chart;
+    return donut_chart;
   };
 
-  chart.radius = function(value) {
+  donut_chart.radius = function(value) {
     if (!arguments.length) return radius;
     radius = value;
-    return chart;
+    return donut_chart;
   };
 
-  chart.padAngle = function(value) {
+  donut_chart.padAngle = function(value) {
     if (!arguments.length) return padAngle;
     padAngle = value;
-    return chart;
+    return donut_chart;
   };
 
-  chart.cornerRadius = function(value) {
+  donut_chart.cornerRadius = function(value) {
     if (!arguments.length) return cornerRadius;
     cornerRadius = value;
-    return chart;
+    return donut_chart;
   };
 
-  chart.colour = function(value) {
+  donut_chart.colour = function(value) {
     if (!arguments.length) return colour;
     colour = value;
-    return chart;
+    return donut_chart;
   };
 
-  chart.variable = function(value) {
+  donut_chart.variable = function(value) {
     if (!arguments.length) return variable;
     variable = value;
-    return chart;
+    return donut_chart;
   };
-  chart.variable_sub = function(value) {
+  donut_chart.variable_sub = function(value) {
     if (!arguments.length) return variable_sub;
     variable_sub = value;
-    return chart;
+    return donut_chart;
   };
-  chart.variable_total = function(value) {
+  donut_chart.variable_total = function(value) {
     if (!arguments.length) return variable_total;
     variable_total = value;
-    return chart;
+    return donut_chart;
   };
 
-  chart.category = function(value) {
+  donut_chart.category = function(value) {
     if (!arguments.length) return category;
     category = value;
-    return chart;
+    return donut_chart;
   };
 
-  return chart;
+  return donut_chart;
 }
