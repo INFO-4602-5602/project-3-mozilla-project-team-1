@@ -28,8 +28,8 @@ biPartitePlot.prototype.partData = function(data, index) {
   return this.bP.partData(data, index);
 };
 
-d3.json("../data/vis_4_1.json", function(v4_data_1) {
-  d3.json("../data/vis_4_2.json", function(v4_data_2) {
+d3.json("data/vis_4_1.json", function(v4_data_1) {
+  d3.json("data/vis_4_2.json", function(v4_data_2) {
     var plot = new biPartitePlot("vis4_chart");
     var data = [{
       data: plot.partData(v4_data_1, 2),
