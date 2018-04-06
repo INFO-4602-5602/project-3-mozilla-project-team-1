@@ -4,7 +4,7 @@
 
 **Brief description of our project(What):**
 <br></br>
-This project explores Mozilla survey dataset, which collected people's perceptions towards a highly connected world. All of our four visualizations focus on discovering how people's technical level or geolocation (e.g., country) influence their perceptions about technology.
+This project explores Mozilla survey dataset, which collected people's perceptions towards a highly connected world. All of our four visualizations focus on discovering how people's technical level or geolocation (e.g., country) influence their perceptions about technology. Besides the basic requirements, we also satisfied additional requirements: 1) Semantic Zoom (showing detailed proportion of tech level of each country in visualization 1), 2) Missing Data (we treat fields with missing data as NaN and they are not included in the statistics), 3) Coordinated Views (in visualization 2 & 4), 4) Style (we applied consistent division for each chart). 
 <br></br>
 
 **Brief description of Visualization 1:**
