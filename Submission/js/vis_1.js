@@ -23,7 +23,7 @@ var margin = {
   height = 500 - margin.top - margin.bottom;
 
 
-var color = d3.scaleThreshold()
+var world_color = d3.scaleThreshold()
   .domain(d3.range(0, 10))
   .range(d3.schemeOranges[9]);
 
@@ -83,7 +83,7 @@ function ready(error, world, tech) {
       if (techRatioById[d.id] !== null && techRatioById[d.id] !== undefined) {
         rate = techRatioById[d.id];
       }
-      return color(rate);
+      return world_color(rate);
     })
     .style('stroke', 'white')
     .style('stroke-width', 1.5)
@@ -177,7 +177,7 @@ function donutChart() {
 
     var radius = Math.min(width, height) / 2;
 
-    var color = d3.scaleOrdinal(d3.schemeCategory20c);
+    var v1d_color = d3.scaleOrdinal(d3.schemeCategory20c);
 
     var vd_svg = d3.select('#vis_1_donut')
       .append('svg')
@@ -205,7 +205,7 @@ function donutChart() {
       .append('path')
       .attr('d', arc)
       .attr('fill', function(d, i) {
-        return color(d.data.vsub);
+        return v1d_color(d.data.vsub);
       });
 
     var text = vd_svg
