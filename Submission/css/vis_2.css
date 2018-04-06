@@ -1,12 +1,4 @@
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  background-color: #fff;
-  width: 1000px;
-  height: 700px;
-  margin-top: 10px;
-}
+
 #skillmap .skills-wrapper {
   margin-top: 10px;
   overflow: auto;
