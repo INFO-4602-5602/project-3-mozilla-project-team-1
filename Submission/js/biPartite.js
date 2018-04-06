@@ -167,7 +167,7 @@ var biPartite = function()
 	function drawHeader(header, id){
 		d3.select("#"+id).append("g").attr("class","header").append("text").text(header[2])
 			.style("font-size","16").attr("x",108).attr("y",-30).style("text-anchor","middle")
-			.style("font-weight","bold");
+			.style("font-style","italic");
 
 		[0,1].forEach(function(d){
 			var h = d3.select("#"+id).select(".part"+d).append("g").attr("class","header");

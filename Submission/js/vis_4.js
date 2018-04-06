@@ -7,7 +7,7 @@ var biPartitePlot = function(chartElementId) {
     margin = {
       b: 0,
       t: 60,
-      l: 200,
+      l: 180,
       r: 10
     };
 
@@ -34,11 +34,11 @@ d3.json("data/vis_4_1.json", function(v4_data_1) {
     var data = [{
       data: plot.partData(v4_data_1, 2),
       id: 'TechResponsibility',
-      header: ["Tech", "Who", "Tech Level & Who protect safety, security and privacy online"]
+      header: ["Tech", "Who", "Who should protect your safety, security and privacy online?"]
     }, {
       data: plot.partData(v4_data_2, 2),
       id: 'TechResponsibilityFuture',
-      header: ["Tech", "Attitude", "Tech Level & Attitude towards a connected future"]
+      header: ["Tech", "Attitude", "How do you think about a connected future?"]
     }];
     plot.draw(data);
   });
