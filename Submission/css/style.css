@@ -4,6 +4,7 @@
   background-size: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
+  font-size: 25px;
 }
 
 .visDiv {
@@ -29,4 +30,17 @@
 #bg4 {
   padding: 2%;
   background-color: #ffa366;
+}
+
+.img1 {
+	margin: 0px 0px 25px 900px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+
+}
+.last{
+	background-color: #063340;
+	color: white;
+	
 }
