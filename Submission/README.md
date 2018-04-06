@@ -23,10 +23,15 @@ This project explores Mozilla survey dataset, which collected people's perceptio
 **Brief description of Visualization 2:**
 <br></br>
 * What does it show:
+     * The relationship between tech level and people's future concerns of technology by countries.
+     * An coordinated pie chart and pie chart displays hierarchical information on the percentage of different concerns.
 * Interactions part:
-     *
-     *
+     * Mouseover the pie chart to select from  and highlight different tech levels, continents and countries.
+     * Get the coordinated bar chart indicating future concerns from a global view, a continent view, and a detailed country view.
 * Conclusions:
+     * Privacy loss is the biggest future concern among all four tech levels participants.
+     * Except for Ultrad Nerd, the biggest concerns for Italy users is lose touch.
+<br></br>
 
 
 **Brief description of Visualization 3:**
