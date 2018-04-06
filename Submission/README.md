@@ -4,7 +4,7 @@
 
 **Brief description of our project(What):**
 <br></br>
-This project explores Mozilla survey dataset, which explored people's perceptions towards a highly connected world. All of our four visualizations focus on discovering how people's technical level or geolocation (e.g., country) influence their perceptions about technology.
+This project explores Mozilla survey dataset, which collected people's perceptions towards a highly connected world. All of our four visualizations focus on discovering how people's technical level or geolocation (e.g., country) influence their perceptions about technology.
 <br></br>
 
 **Brief description of Visualization 1:**
@@ -43,15 +43,14 @@ This project explores Mozilla survey dataset, which explored people's perception
 **Brief description of Visualization 4:**
 <br></br>
 * What does it show:
+     * The relationships between different tech levels and people's perceptions: 1) Who should protect your safety, security and privacy online? 2) How do you think about a world highly connected to internet?
 * Interactions part:
-     *
-     *
-     *
-
+     * Mouse over text/bar to show detailed distribution of each category, with updated percentages.
+     * Coordinate views between two subgraphs, showing detailed informations corresponding to the same tech level.
 * Conclusions:
-     *
-     *
-     *
+     * Most people with higher tech level (Technically Savvy or Ultra Nerd) think non-profit organizations like Mozilla should protect their safety, security and privacy online, while most people with lower tech level (Average User or Luddite) don't know who to trust.
+     * Most people with higher tech level (Technically Savvy or Ultra Nerd) are cautiously optimistic about a highly connected future, while most people with lower tech level (Average User or Luddite) are a little wary about a highly connected future.
+     * Interestingly, people with highest tech level (Ultra Nerd) and people with lowest tech level (Luddite) have higher percentage of people who are scared as hell about a highly connected future than the other groups. 
 <br></br>
 
 **Our design process(How and Why):**
@@ -65,9 +64,9 @@ This project explores Mozilla survey dataset, which explored people's perception
 <br></br>
 
 **Our team roles:**
-<br>Keke Wu: Viz2 | Styling</br>
+<br>Keke Wu: Viz3 | Styling</br>
 <br>Wei Miao: Viz1 | Framework</br>
-<br>Xu Han: Viz3 | Data Processing  </br>
+<br>Xu Han: Viz2 | Data Processing  </br>
 <br>Yawen Zhang: Viz4 | Data Processing  </br>
 <br>Jiawen Liu: Viz Prototype | Styling</br>
 
