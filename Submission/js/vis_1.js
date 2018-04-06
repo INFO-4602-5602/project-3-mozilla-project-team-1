@@ -73,7 +73,7 @@ function ready(error, world, tech) {
   });
 
   svg.append("g")
-    .attr("class", "countries")
+    .attr("class", "v1_world")
     .selectAll("path")
     .data(world.features)
     .enter().append("path")
@@ -116,13 +116,12 @@ function ready(error, world, tech) {
     .datum(topojson.mesh(world.features, function(a, b) {
       return a.id !== b.id;
     }))
-    // .datum(topojson.mesh(data.features, function(a, b) { return a !== b; }))
     .attr("class", "names")
     .attr("d", path);
 }
 
 function v1DataChange() {
-  var x = document.getElementById("v1_data_select").value;
+  //var x = document.getElementById("v1_data_select").value;
   queue()
     .defer(d3.json, "data/world_countries.json")
     .defer(d3.csv, "data/vis_1.csv")
