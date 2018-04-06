@@ -29,7 +29,7 @@ var color = d3.scaleThreshold()
 
 var path = d3.geoPath();
 
-var svg = d3.select("#vis_1")
+var v1_svg = d3.select("#vis_1")
   .append("svg")
   .attr("width", width)
   .attr("height", height)
@@ -42,7 +42,7 @@ var projection = d3.geoMercator()
 
 var path = d3.geoPath().projection(projection);
 
-svg.call(tip);
+v1_svg.call(tip);
 
 queue()
   .defer(d3.json, "data/world_countries.json")
@@ -72,7 +72,7 @@ function ready(error, world, tech) {
     d.techtotal = techTotal[d.id];
   });
 
-  svg.append("g")
+  v1_svg.append("g")
     .attr("class", "v1_world")
     .selectAll("path")
     .data(world.features)
@@ -112,7 +112,7 @@ function ready(error, world, tech) {
         .style("stroke-width", 0.3);
     });
 
-  svg.append("path")
+  v1_svg.append("path")
     .datum(topojson.mesh(world.features, function(a, b) {
       return a.id !== b.id;
     }))
@@ -179,7 +179,7 @@ function donutChart() {
 
     var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
-    var svg = d3.select('#vis_1_donut')
+    var vd_svg = d3.select('#vis_1_donut')
       .append('svg')
       .attr('width', width)
       .attr('height', height)
@@ -199,7 +199,7 @@ function donutChart() {
       })
       .sort(null);
 
-    var path = svg.selectAll('path')
+    var path = vd_svg.selectAll('path')
       .data(pie(dataset))
       .enter()
       .append('path')
@@ -208,7 +208,7 @@ function donutChart() {
         return color(d.data.vsub);
       });
 
-    var text = svg
+    var text = vd_svg
       .append("text")
       .attr("text-anchor", "middle")
       .attr('font-size', '1.5em')
