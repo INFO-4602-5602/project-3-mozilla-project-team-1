@@ -1,5 +1,6 @@
 // Reference: https://github.com/cschen1205/js-d3-charts-made-simple
 // The biPartite chart wrapper is provided
+
 var  biPartite = function()
 {
 	var bP={};
