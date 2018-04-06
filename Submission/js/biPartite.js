@@ -1,5 +1,6 @@
-// Reference: https://github.com/cschen1205/js-d3-charts-made-simple
-// The biPartite chart wrapper is provided
+// Reference: https://github.com/cschen1205/js-d3-charts-made-simple/blob/master/src/biPartite.js
+// I used it as a biPartite wrapper for vis_4.js with minor adjustments on original code
+// Also, I fixed a small bug of text display in original wrapper
 
 var biPartite = function()
 {
@@ -135,11 +136,7 @@ var biPartite = function()
 			.style("font-size","14")
 			.attr("text-anchor","start");
 
-		// mainbar.append("text").attr("class","barvalue")
-		// 	.attr("x", c2[p]).attr("y",function(d){ return d.middle+5;})
-		// 	.text(function(d,i){ return d.value ;})
-		// 	.style("font-size","10")
-		// 	.attr("text-anchor","end");
+		// delete barvalue definition
 
 		mainbar.append("text").attr("class","barpercent")
 			.attr("x", c1[p]).attr("y",function(d){ return d.middle+20;})
@@ -199,8 +196,7 @@ var biPartite = function()
 		mainbar.select(".barlabel").transition().duration(500)
 			.attr("y",function(d){ return d.middle+5;});
 
-		// mainbar.select(".barvalue").transition().duration(500)
-		// 	.attr("y",function(d){ return d.middle+5;}).text(function(d,i){ return d.value ;});
+		// delete barvalue
 
 		mainbar.select(".barpercent").transition().duration(500)
 			.attr("y",function(d){ return d.middle+20;})
@@ -270,7 +266,7 @@ var biPartite = function()
 
 			selectedBar.select(".mainrect").style("stroke-opacity",1);
 			selectedBar.select(".barlabel").style('font-weight','bold');
-			//selectedBar.select(".barvalue").style('font-weight','bold');
+			// delete select bar value
 			selectedBar.select(".barpercent").style('font-weight','bold');
 		});
 	}
@@ -284,7 +280,7 @@ var biPartite = function()
 
 			selectedBar.select(".mainrect").style("stroke-opacity",0);
 			selectedBar.select(".barlabel").style('font-weight','normal');
-			//selectedBar.select(".barvalue").style('font-weight','normal');
+			//delete select bar value
 			selectedBar.select(".barpercent").style('font-weight','normal');
 		});
 	}
