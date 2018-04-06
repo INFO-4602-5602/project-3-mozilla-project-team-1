@@ -10,12 +10,15 @@ This project explores Mozilla survey dataset, which explored people's perception
 **Brief description of Visualization 1:**
 <br></br>
 * What does it show:
+     * Global distribution and comparison of people’s tech proficient in four levels.
 * Interactions part:
-     *
-     *
+     * Switching among different tech level data from the dropdown list.
+     * Mouse over to show a tooltip of the proportion of current tech level of the selected country.
+     * Mouse over to show the detail count and proportion of the current tech level in a donut chart.
 * Conclusions:
-     *
-     *
+     * Tech ratio of tech level in "Ultra Nerd" and "Luddite" is very low in all countries, most of the people are tech-savvy.
+     * The number of people involved in the survey varies widely，in some countries only less than 10 people took the survey, while the countries like USA has about 20,000 people involved in the survey. So it may not reflecting the real situation when the number of participants in the survey was very small.
+     * There is no clear standard for technical levels, so people from different countries may have different criteria to evaluate themselves.
 
 **Brief description of Visualization 2:**
 <br></br>

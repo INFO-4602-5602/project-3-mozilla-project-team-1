@@ -14,6 +14,7 @@
   <!-- project css -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/world_map.css">
+  <link rel="stylesheet" type="text/css" href="css/vis_2.css"/>
 </head>
 
 <body>
@@ -21,9 +22,15 @@
     <!-- head section -->
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="text-light">INFO-4602/5602 Project 3</h1>
-        <p class="text-warning">Project info ...</p>
-        <img class = "img1" src = "img/Edge-Analytics-Market.jpg" alt = "fail"></img>
+        <div class="row">
+          <div class="col-9">
+            <h1 class="text-light">INFO-4602/5602 Project 3</h1>
+            <p class="text-warning">Project info ...</p>
+          </div>
+          <div class="col-3 text-right">
+            <img class="img-fluid img-thumbnail img1" src="img/Edge-Analytics-Market.jpg" alt="fail"></img>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -78,7 +85,8 @@
         <div class="col-3 border-right">
           <h3 class="text-center">Vis2 Description</h3>
           <h4>
-          <br>We use color depth to indicate amount.</br></h4><h6> Click on pie chart to zoom in; click on center to zoom out.</h6>
+          <br>We use color depth to indicate amount.</br></h4>
+          <h6> Click on pie chart to zoom in; click on center to zoom out.</h6>
           <h6><br>Conclusions:</br><h6>
           <h4><ul><li>Number of male students are much more than female students no matter which year.<h6>(first layer)</h6></li>
           </ul>
@@ -90,12 +98,32 @@
         <div class="col-9  ">
           <h3 class="text-center">Vis 2</h3>
           <div class="charts" id="chart_2">
+          <div id="skills">
+            <div id="skillmap">
+             <div class="skills-wrapper">
+             <div class="skills-sunburst"></div>
+             <div class="skills-chart">
+            <div id="skills-chart-breadcrumb"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
           </div>
         </div>
       </div>
     </div>
 
+    <div id="skills">
+      <div id="skillmap">
+        <div class="skills-wrapper">
+          <div class="skills-sunburst"></div>
+          <div class="skills-chart">
+            <div id="skills-chart-breadcrumb"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Visualization #3 -->
     <div id="bg3">
       <div class="container visDiv">
@@ -109,8 +137,9 @@
     <div id="bg4" class="bipartite">
       <div class="container visDiv">
         <h2 class="text-center">Chart 4</h2>
-        
+        <div id="vis4_chart">
 
+        </div>
       </div>
 
     </div>
@@ -143,8 +172,10 @@
   <script type="text/javascript" src="js/biPartite.js"></script>
 
   <!-- Visualization scripts -->
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/vis_1.js"></script>
-  <script type="text/javascript" src="js/vis2.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/vis_2.js"></script>
   <script type="text/javascript" src="js/vis_3.js"></script>
   <script type="text/javascript" src="js/vis_4.js"></script>
 

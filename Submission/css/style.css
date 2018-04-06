@@ -57,15 +57,12 @@
 }
 
 .img1 {
-	margin: 0px 0px 25px 900px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 200px;
-
+  max-height: 200px;
 }
-.last{
-	background-color: #063340;
-	color: white;
+
+.last {
+  background-color: #063340;
+  color: white;
 }
 
 p {
