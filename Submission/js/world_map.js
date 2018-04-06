@@ -337,5 +337,4 @@
 
     return tip
   }
-  // eslint-disable-next-line semi
 }));

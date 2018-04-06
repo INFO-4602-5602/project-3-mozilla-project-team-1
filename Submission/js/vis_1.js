@@ -121,7 +121,6 @@ function ready(error, world, tech) {
 }
 
 function v1DataChange() {
-  //var x = document.getElementById("v1_data_select").value;
   queue()
     .defer(d3.json, "data/world_countries.json")
     .defer(d3.csv, "data/vis_1.csv")
