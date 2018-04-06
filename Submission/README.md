@@ -50,7 +50,7 @@ This project explores Mozilla survey dataset, which collected people's perceptio
 * Conclusions:
      * Most people with higher tech level (Technically Savvy or Ultra Nerd) think non-profit organizations like Mozilla should protect their safety, security and privacy online, while most people with lower tech level (Average User or Luddite) don't know who to trust.
      * Most people with higher tech level (Technically Savvy or Ultra Nerd) are cautiously optimistic about a highly connected future, while most people with lower tech level (Average User or Luddite) are a little wary about a highly connected future.
-     * Interestingly, people with highest tech level (Ultra Nerd) and people with lowest tech level (Luddite) have higher percentage of people who are scared as hell about a highly connected future than the other groups. 
+     * Interestingly, people with highest tech level (Ultra Nerd) and people with lowest tech level (Luddite) have higher percentage of people who are scared as hell about a highly connected future than the two levels. 
 <br></br>
 
 **Our design process(How and Why):**
