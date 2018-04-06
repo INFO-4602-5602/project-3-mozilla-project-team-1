@@ -62,7 +62,7 @@ This project explores Mozilla survey dataset, which collected people's perceptio
      <br></br>
      
 * How:
-    <br>In Viz1, we used a world map to visualize global tech levels information, with a pie chart disclosing detailed population.In Viz2, we used an coordinated pie chart and a bar chart to display people's perceptions of devices privacy issues by their tech savvy and country.In Viz3, we used a heatmap to show the most important factors influencing people's smart devices buying decisions.In Viz4, we used a biPartite graph to display the relationship between people's tech level and their sense of privacy.</br>
+    <br>Considering attributes of different types of charts, we used Map, Pie Chart, Bar Chart, Heatmap and biPartite graph in our visualization. In Viz1, we used a world map to visualize global tech levels information, with a pie chart disclosing detailed population. In Viz2, we used an coordinated pie chart and a bar chart to display people's perceptions of devices privacy issues by their tech savvy and country. In Viz3, we used a heatmap to show the most important factors influencing people's smart devices buying decisions. In Viz4, we used a biPartite graph to display the relationship between people's tech level and their sense of privacy.</br>
     
 <br></br>
 
