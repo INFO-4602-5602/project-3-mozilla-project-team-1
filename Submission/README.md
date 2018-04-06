@@ -61,10 +61,10 @@ This project explores Mozilla survey dataset, which collected people's perceptio
      <br>2)With this theme, we brainstromed possible questions that can be explored and listed them in a worksheet. We analyzed them in terms of ways to visualize, meaningfulness, necessities and so on. Based on our analysis, we chose four questions to explore and visualize: 1) What the geo distribution of people with different technical level?, 2) What is the relationship between tech level/geo information and perceptions of privacy? 3) What is the relationship between geo information and criteria when purchasing tech products? 4) What is the relationship between tech level and who to provide protection online, attitude towards a connected future?</br>
      <br></br>
 * How:
-    <br>1)In Viz1, we used a world map to visualize global tech levels information, with a pie chart disclosing detailed population.</br>
-    <br>2)In Viz2, we used an coordinated pie chart and a bar chart to display people's perceptions of devices privacy issues by their tech savvy and country.</br>
-    <br>2)In Viz3, we used a heatmap to show the most important factors influencing people's smart devices buying decisions.</br>
-        <br>2)In Viz4, we used a heatmap to show the most important factors influencing people's smart devices buying decisions.</br>
+    <br>In Viz1, we used a world map to visualize global tech levels information, with a pie chart disclosing detailed population.</br>
+    <br>In Viz2, we used an coordinated pie chart and a bar chart to display people's perceptions of devices privacy issues by their tech savvy and country.</br>
+    <br>In Viz3, we used a heatmap to show the most important factors influencing people's smart devices buying decisions.</br>
+    <br>In Viz4, we used a biPartite graph to display the relationship between people's tech level and their sense of privacy.</br>
 <br></br>
 
 **Our team roles:**
