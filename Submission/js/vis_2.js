@@ -1,4 +1,4 @@
-d3v3.select("#bg2").style("height", "1000px");
+d3v3.select("#bg2");
 function initchart() {
     var data = {
         _proficiency: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
