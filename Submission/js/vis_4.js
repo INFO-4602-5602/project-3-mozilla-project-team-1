@@ -3,7 +3,7 @@
 var biPartitePlot = function(chartElementId)
 {
 	var biPartiteObj = new biPartite();
-	var width = 1100, height = 610, margin = {b:0, t:40, l:170, r:50};
+	var width = 1500, height = 610, margin = {b:0, t:60, l:500, r:10};
 
 	var svg = d3.select("#"+chartElementId)
 		.append("svg").attr('width',width).attr('height',(height+margin.b+margin.t))
@@ -26,8 +26,8 @@ d3.json("../data/vis_4_1.json", function(v4_data_1) {
 	d3.json("../data/vis_4_2.json", function(v4_data_2) {
 	var plot = new biPartitePlot("bg4");
 	var data = [
-	{data: plot.partData(v4_data_1, 2), id:'TechResponsibility', header:["Tech", "Res", "Tech Level & Responsibility"]}
-	,{data: plot.partData(v4_data_2, 2), id:'TechResponsibilityFuture', header:["Tech", "Attitude", "Tech Level & Connected Future"]}
+	{data: plot.partData(v4_data_1, 2), id:'TechResponsibility', header:["Tech", "Who", "Tech Level & Who protect safety, security and privacy online"]}
+	,{data: plot.partData(v4_data_2, 2), id:'TechResponsibilityFuture', header:["Tech", "Attitude", "Tech Level & Attitude towards a connected future"]}
 	];
 	plot.draw(data);});
 });

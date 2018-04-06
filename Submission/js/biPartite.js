@@ -132,7 +132,7 @@ var biPartite = function()
 		mainbar.append("text").attr("class","barlabel")
 			.attr("x", c1[p]).attr("y",function(d){ return d.middle+5;})
 			.text(function(d,i){ return data.keys[p][i];})
-			.style("font-size","15")
+			.style("font-size","14")
 			.attr("text-anchor","start");
 
 		// mainbar.append("text").attr("class","barvalue")
@@ -166,7 +166,7 @@ var biPartite = function()
 
 	function drawHeader(header, id){
 		d3.select("#"+id).append("g").attr("class","header").append("text").text(header[2])
-			.style("font-size","20").attr("x",108).attr("y",-20).style("text-anchor","middle")
+			.style("font-size","16").attr("x",108).attr("y",-30).style("text-anchor","middle")
 			.style("font-weight","bold");
 
 		[0,1].forEach(function(d){
