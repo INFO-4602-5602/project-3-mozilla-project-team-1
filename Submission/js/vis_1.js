@@ -5,7 +5,12 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return "<strong>Country: </strong><span class='details'>" + d.properties.name + "<br></span>" + "<strong>Population: </strong><span class='details'>" + format(d.population) + "</span>";
+    var tech_ratio = "NA";
+    if (d.techratio !== null && d.techratio !== undefined) {
+      tech_ratio = format(d.techratio.toPrecision(3) * 10) + "%";
+    }
+
+    return "<strong>Country: </strong><span class='details'>" + d.properties.name + "<br></span>" + "<strong>Tech Ratio: </strong><span class='details'>" + tech_ratio + "</span>";
   });
 
 var margin = {
@@ -17,14 +22,9 @@ var margin = {
   width = 960 - margin.left - margin.right,
   height = 500 - margin.top - margin.bottom;
 
-/*
-var color = d3.scaleThreshold()
-  .domain([10000, 100000, 500000, 1000000, 5000000, 10000000, 50000000, 100000000, 500000000, 1500000000])
-  .range(["rgb(247,251,255)", "rgb(222,235,247)", "rgb(198,219,239)", "rgb(158,202,225)", "rgb(107,174,214)", "rgb(66,146,198)", "rgb(33,113,181)", "rgb(8,81,156)", "rgb(8,48,107)", "rgb(3,19,43)"]);
-*/
 
 var color = d3.scaleThreshold()
-  .domain(d3.range(0, 1))
+  .domain(d3.range(0, 10))
   .range(d3.schemeOranges[9]);
 
 var path = d3.geoPath();
@@ -51,30 +51,26 @@ queue()
 
 function ready(error, world, tech) {
   if (error) throw error;
-  //console.log(world);
-  //console.log(tech);
 
-  var populationById = {};
+  var ct = document.getElementById("v1_data_select");
+  var selectVal = ct.options[ct.selectedIndex].value;
+  var selectSub = ct.options[ct.selectedIndex].text.replace(/\s+/g, '');
+
+  var techRatioById = {};
+  var techTotal = {};
+  var techSub = {};
 
   tech.forEach(function(d) {
-    populationById[d.id] = +d.AverageUserRatio;
+    techRatioById[d.id] = +d[selectVal] * 10;
+    techSub[d.id] = +d[selectSub];
+    techTotal[d.id] = +d.Q1total;
   });
 
   world.features.forEach(function(d) {
-    //console.log(d.properties.name + "," + d.id);
-    d.techratio = populationById[d.id];
+    d.techratio = techRatioById[d.id];
+    d.techsub = techSub[d.id];
+    d.techtotal = techTotal[d.id];
   });
-
-
-
-
-  // population.forEach(function(d) {
-  //   populationById[d.id] = +d.population;
-  // });
-  // data.features.forEach(function(d) {
-  //   d.population = populationById[d.id]
-  // });
-
 
   svg.append("g")
     .attr("class", "countries")
@@ -83,16 +79,24 @@ function ready(error, world, tech) {
     .enter().append("path")
     .attr("d", path)
     .style("fill", function(d) {
-      return color(populationById[d.id]);
+      var rate = 0;
+      if (techRatioById[d.id] !== null && techRatioById[d.id] !== undefined) {
+        rate = techRatioById[d.id];
+      }
+      return color(rate);
     })
     .style('stroke', 'white')
     .style('stroke-width', 1.5)
     .style("opacity", 0.8)
+    .style("cursor", "pointer")
     // tooltips
     .style("stroke", "white")
     .style('stroke-width', 0.3)
     .on('mouseover', function(d) {
       tip.show(d);
+      if (d.techtotal !== null && d.techtotal !== undefined) {
+        dountTip(d.techsub, d.techtotal);
+      }
 
       d3.select(this)
         .style("opacity", 1)
@@ -115,4 +119,168 @@ function ready(error, world, tech) {
     // .datum(topojson.mesh(data.features, function(a, b) { return a !== b; }))
     .attr("class", "names")
     .attr("d", path);
+}
+
+function v1DataChange() {
+  var x = document.getElementById("v1_data_select").value;
+  queue()
+    .defer(d3.json, "data/world_countries.json")
+    .defer(d3.csv, "data/vis_1.csv")
+    .await(ready);
+}
+
+function dountTip(sub, total) {
+  d3.select('#vis_1_donut')
+    .html("");
+
+  var donut = donutChart()
+    .width(250)
+    .height(250)
+    .cornerRadius(3) // sets how rounded the corners are on each slice
+    .padAngle(0.015) // effectively dictates the gap between slices
+    .variable_sub(sub)
+    .variable_total(total);
+
+  d3.select('#vis_1_donut')
+    .call(donut);
+}
+
+//draw the donut chart
+function donutChart() {
+  var width,
+    height,
+    margin = {
+      top: 10,
+      right: 10,
+      bottom: 10,
+      left: 10
+    },
+    colour = d3.scaleOrdinal(d3.schemeCategory20c), // colour scheme
+    variable, // value in data that will dictate proportions on chart
+    variable_sub,
+    variable_total,
+    category, // compare data by
+    padAngle, // effectively dictates the gap between slices
+    floatFormat = d3.format('.4r'),
+    cornerRadius, // sets how rounded the corners are on each slice
+    percentFormat = d3.format(',.2%');
+
+  function chart() {
+    var dataset = [{
+        vsub: "s1",
+        value: variable_sub
+      },
+      {
+        vsub: "s2",
+        value: (variable_total - variable_sub)
+      },
+    ];
+
+    var radius = Math.min(width, height) / 2;
+
+    var color = d3.scaleOrdinal(d3.schemeCategory20c);
+
+    var svg = d3.select('#vis_1_donut')
+      .append('svg')
+      .attr('width', width)
+      .attr('height', height)
+      .append('g')
+      .attr('transform', 'translate(' + (width / 2) +
+        ',' + (height / 2) + ')');
+
+    var donutWidth = 55;
+
+    var arc = d3.arc()
+      .innerRadius(radius - donutWidth)
+      .outerRadius(radius);
+
+    var pie = d3.pie()
+      .value(function(d) {
+        return d.value;
+      })
+      .sort(null);
+
+    var path = svg.selectAll('path')
+      .data(pie(dataset))
+      .enter()
+      .append('path')
+      .attr('d', arc)
+      .attr('fill', function(d, i) {
+        return color(d.data.vsub);
+      });
+
+    var text = svg
+      .append("text")
+      .attr("text-anchor", "middle")
+      .attr('font-size', '1.5em')
+      .attr('y', 12)
+      .text(variable_sub + "/" + variable_total);
+  }
+
+  // getter and setter functions.
+  chart.width = function(value) {
+    if (!arguments.length) return width;
+    width = value;
+    return chart;
+  };
+
+  chart.height = function(value) {
+    if (!arguments.length) return height;
+    height = value;
+    return chart;
+  };
+
+  chart.margin = function(value) {
+    if (!arguments.length) return margin;
+    margin = value;
+    return chart;
+  };
+
+  chart.radius = function(value) {
+    if (!arguments.length) return radius;
+    radius = value;
+    return chart;
+  };
+
+  chart.padAngle = function(value) {
+    if (!arguments.length) return padAngle;
+    padAngle = value;
+    return chart;
+  };
+
+  chart.cornerRadius = function(value) {
+    if (!arguments.length) return cornerRadius;
+    cornerRadius = value;
+    return chart;
+  };
+
+  chart.colour = function(value) {
+    if (!arguments.length) return colour;
+    colour = value;
+    return chart;
+  };
+
+  chart.variable = function(value) {
+    if (!arguments.length) return variable;
+    variable = value;
+    return chart;
+  };
+  chart.variable_sub = function(value) {
+    if (!arguments.length) return variable_sub;
+    variable_sub = value;
+    return chart;
+  };
+  chart.variable_total = function(value) {
+    if (!arguments.length) return variable_total;
+    variable_total = value;
+    return chart;
+  };
+
+  chart.category = function(value) {
+    if (!arguments.length) return category;
+    category = value;
+    return chart;
+  };
+
+  return chart;
 }

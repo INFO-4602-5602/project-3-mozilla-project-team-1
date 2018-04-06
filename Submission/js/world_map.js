@@ -98,9 +98,9 @@
         return getNodeEl().attr(n)
       }
 
-      var args = Array.prototype.slice.call(arguments)
+      var args = Array.prototype.slice.call(arguments);
       d3Selection.selection.prototype.attr.apply(getNodeEl(), args)
-      return tip
+      return tip;
     }
 
     // Public: Proxy style calls to the d3 tip container.
@@ -116,9 +116,9 @@
         return getNodeEl().style(n)
       }
 
-      var args = Array.prototype.slice.call(arguments)
-      d3Selection.selection.prototype.style.apply(getNodeEl(), args)
-      return tip
+      var args = Array.prototype.slice.call(arguments);
+      d3Selection.selection.prototype.style.apply(getNodeEl(), args);
+      return tip;
     }
 
     // Public: Set or get the direction of the tooltip
@@ -129,9 +129,9 @@
     // Returns tip or direction
     tip.direction = function(v) {
       if (!arguments.length) return direction
-      direction = v == null ? v : functor(v)
+      direction = v == null ? v : functor(v);
 
-      return tip
+      return tip;
     }
 
     // Public: Sets or gets the offset of the tip
@@ -141,9 +141,9 @@
     // Returns offset or
     tip.offset = function(v) {
       if (!arguments.length) return offset
-      offset = v == null ? v : functor(v)
+      offset = v == null ? v : functor(v);
 
-      return tip
+      return tip;
     }
 
     // Public: sets or gets the html value of the tooltip
@@ -153,9 +153,9 @@
     // Returns html value or tip
     tip.html = function(v) {
       if (!arguments.length) return html
-      html = v == null ? v : functor(v)
+      html = v == null ? v : functor(v);
 
-      return tip
+      return tip;
     }
 
     // Public: destroys the tooltip and removes it from the DOM
@@ -166,15 +166,15 @@
         getNodeEl().remove()
         node = null
       }
-      return tip
+      return tip;
     }
 
     function d3TipDirection() {
-      return 'n'
+      return 'n';
     }
 
     function d3TipOffset() {
-      return [0, 0]
+      return [0, 0];
     }
 
     function d3TipHTML() {

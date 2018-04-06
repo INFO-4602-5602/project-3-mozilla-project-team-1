@@ -12,6 +12,7 @@
 
   <!-- project css -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/world_map.css">
 </head>
 
 <body>
@@ -46,10 +47,24 @@
     <!-- Visualization #1 -->
     <div id="bg1">
       <div class="container visDiv text-center">
-        <h2 class="text-center">Chart 1</h2>
-        <div id="vis_1">
+        <h2 class="text-center">Worldwide Technology Level</h2>
 
+        <div class="text-right mb-5">
+          <label for="#v1_data_select">Tech Level:</label>
+          <select id="v1_data_select" onchange="v1DataChange()">
+            <option value="UltraNerdRatio" selected="selected">Ultra Nerd</option>
+            <option value="TechnicallySavvyRatio">Technically Savvy</option>
+            <option value="AverageUserRatio">Average User</option>
+            <option value="LudditeRatio">Luddite</option>
+          </select>
         </div>
+
+        <div id="vis_1">
+          <div id="vis_1_donut">
+
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -110,6 +125,7 @@
   <script type="text/javascript" src="js/vis_2.js"></script>
   <script type="text/javascript" src="js/vis_3.js"></script>
   <script type="text/javascript" src="js/vis_4.js"></script>
+
 </body>
 
 </html>

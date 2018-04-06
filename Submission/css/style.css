@@ -30,3 +30,13 @@
   padding: 2%;
   background-color: #ffa366;
 }
+
+#vis_1 {
+  position: relative;
+}
+
+#vis_1_donut {
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
+}
