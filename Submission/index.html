@@ -14,7 +14,7 @@
   <!-- project css -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/world_map.css">
-  <link rel="stylesheet" type="text/css" href="css/vis_2.css"/>
+  <link rel="stylesheet" type="text/css" href="css/vis_2.css" />
 </head>
 
 <body>
@@ -78,52 +78,30 @@
     </div>
 
     <!-- Visualization #2 -->
-    <div class="vis container " id="bg2">
-      <h2 class="text-center">Vis 2</h2>
-      <hr class="my-3">
-      <div class="row">
-        <div class="col-3 border-right">
-          <h3 class="text-center">Vis2 Description</h3>
-          <h4>
-          <br>We use color depth to indicate amount.</br></h4>
-          <h6> Click on pie chart to zoom in; click on center to zoom out.</h6>
-          <h6><br>Conclusions:</br><h6>
-          <h4><ul><li>Number of male students are much more than female students no matter which year.<h6>(first layer)</h6></li>
-          </ul>
-          <h4><ul><li>Number of students increased sharply after 2010 no matter which gender.<h6>(second layer after zooming in)</h6></li></ul>
-          <h4><ul><li>White, asian and hispanics are top dominated races no matter which year which gender.<h6>(third layer after zooming in)</h6></li></ul>
+    <div id="bg4" class="bipartite">
+      <div class="container visDiv">
+        <h2 class="text-center">Chart 4</h2>
+        <div id="vis4_chart">
+        <div id="skills">
+              <div id="skillmap">
+                <div class="skills-wrapper">
+                  <div class="skills-sunburst"></div>
+                  <div class="skills-chart">
+                    <div id="skills-chart-breadcrumb"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
 
-
-        </div>
-        <div class="col-9  ">
-          <h3 class="text-center">Vis 2</h3>
-          <div class="charts" id="chart_2">
-          <div id="skills">
-            <div id="skillmap">
-             <div class="skills-wrapper">
-             <div class="skills-sunburst"></div>
-             <div class="skills-chart">
-            <div id="skills-chart-breadcrumb"></div>
-          </div>
         </div>
       </div>
+
     </div>
 
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
 
-    <div id="skills">
-      <div id="skillmap">
-        <div class="skills-wrapper">
-          <div class="skills-sunburst"></div>
-          <div class="skills-chart">
-            <div id="skills-chart-breadcrumb"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+   
     <!-- Visualization #3 -->
     <div id="bg3">
       <div class="container visDiv">
