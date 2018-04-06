@@ -3,7 +3,7 @@
 var biPartitePlot = function(chartElementId)
 {
 	var biPartiteObj = new biPartite();
-	var width = 1500, height = 610, margin = {b:0, t:60, l:500, r:10};
+	var width = 1500, height = 610, margin = {b:0, t:60, l:200, r:10};
 
 	var svg = d3.select("#"+chartElementId)
 		.append("svg").attr('width',width).attr('height',(height+margin.b+margin.t))
