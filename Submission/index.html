@@ -14,6 +14,7 @@
   <!-- project css -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/world_map.css">
+  <link rel="stylesheet" type="text/css" href="css/vis_2.css"/>
 </head>
 
 <body>
@@ -97,12 +98,32 @@
         <div class="col-9  ">
           <h3 class="text-center">Vis 2</h3>
           <div class="charts" id="chart_2">
+          <div id="skills">
+            <div id="skillmap">
+             <div class="skills-wrapper">
+             <div class="skills-sunburst"></div>
+             <div class="skills-chart">
+            <div id="skills-chart-breadcrumb"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
           </div>
         </div>
       </div>
     </div>
 
+    <div id="skills">
+      <div id="skillmap">
+        <div class="skills-wrapper">
+          <div class="skills-sunburst"></div>
+          <div class="skills-chart">
+            <div id="skills-chart-breadcrumb"></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Visualization #3 -->
     <div id="bg3">
       <div class="container visDiv">
@@ -151,8 +172,10 @@
   <script type="text/javascript" src="js/biPartite.js"></script>
 
   <!-- Visualization scripts -->
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/vis_1.js"></script>
-  <script type="text/javascript" src="js/vis2.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/vis_2.js"></script>
   <script type="text/javascript" src="js/vis_3.js"></script>
   <script type="text/javascript" src="js/vis_4.js"></script>
 
