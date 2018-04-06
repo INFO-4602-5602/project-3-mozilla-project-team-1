@@ -4,7 +4,7 @@
 
 **Brief description of our project(What):**
 <br></br>
-This project explores Mozilla survey dataset, which explored people's perceptions towards a highly connected world. All of our four visualizations focus on discovering how people's technical level or geolocation (e.g., country) influence those perceptions about technology.
+This project explores Mozilla survey dataset, which explored people's perceptions towards a highly connected world. All of our four visualizations focus on discovering how people's technical level or geolocation (e.g., country) influence their perceptions about technology.
 <br></br>
 
 **Brief description of Visualization 1:**
