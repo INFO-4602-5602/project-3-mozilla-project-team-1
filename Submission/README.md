@@ -31,14 +31,16 @@ This project explores Mozilla survey dataset, which collected people's perceptio
 
 **Brief description of Visualization 3:**
 <br></br>
-* What does it show:
+* What does it show: 
+     * The relationship between different countries and the factors influcing their technology devices buying decisions.
+     * A gradient heatmap displays consumers' preferences on different factors, ranging from the light pink to dark purple.
 * Interactions part:  
-     *
-     *
-     *
+     * Mouse over each square to display the country name and the percentage of this factor in that country.
+     * Mouse over each square to move between the legend displaying specific percentage.
 * Conclusions:
-     *
-     *
+     * Price and Features are top 2 factors that influcing people's buying behavior for most countires.
+     * People in France and Belgium consider Convenience as the most important factor when buying new technology devices.
+     * People's preferences on other factors such as Safety, Security, User Reviews,Privacy don't have distinct differences.
 
 **Brief description of Visualization 4:**
 <br></br>
