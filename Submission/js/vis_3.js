@@ -122,7 +122,7 @@ var cells = svg.selectAll('rect')
     .attr("rx",3)
     .attr("ry",3)
     .on("mouseover",function(d){
-        console.log(d);
+        //console.log(d);
         //d3.select(this).attr("fill","#655091");
         d3.select(this).style("stroke","orange").style("stroke-width","3px")
         d3.select(".trianglepointer").transition().delay(100).attr("transform","translate("+(-((lPatchWidth/colorScale.range().length)/2+(colorScale.domain().indexOf(bandClassifier(d.perChange,100))*(lPatchWidth/colorScale.range().length) )))+",0)");
@@ -140,7 +140,7 @@ var cells = svg.selectAll('rect')
         tooltip.style("visibility","visible")
         .style("top",(d3.event.pageY-30)+"px").style("left",(d3.event.pageX+20)+"px");
 
-        console.log(d3.mouse(this)[0])
+        //console.log(d3.mouse(this)[0])
         tooltip.select("div").html("<strong>"+d.product+"</strong><br/> "+(+d.value).toFixed(2))
 
     })
