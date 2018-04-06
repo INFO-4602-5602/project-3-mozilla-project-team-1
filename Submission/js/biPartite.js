@@ -1,6 +1,7 @@
 // Reference: https://github.com/cschen1205/js-d3-charts-made-simple
 // The biPartite chart wrapper is provided
-var  biPartite = function()
+
+var biPartite = function()
 {
 	var bP={};
 	var b=30;
@@ -9,7 +10,7 @@ var  biPartite = function()
 	var buffMargin=1;
 	var minHeight=14;
 	var c1=[-130, 40];
-	var c2=[-50, 100];
+	var c2=[-50, 120];
 	var c3=[-10, 140]; //Column positions of labels.
 	var colors =["#3366CC", "#DC3912",  "#FF9900","#109618", "#990099", "#0099C6"];
 
@@ -127,20 +128,24 @@ var  biPartite = function()
 			.style("fill-opacity",0).style("stroke-width","0.5")
 			.style("stroke","black").style("stroke-opacity",0);
 
+    // edit font size
 		mainbar.append("text").attr("class","barlabel")
 			.attr("x", c1[p]).attr("y",function(d){ return d.middle+5;})
 			.text(function(d,i){ return data.keys[p][i];})
-			.attr("text-anchor","start" );
+			.style("font-size","14")
+			.attr("text-anchor","start");
 
-		mainbar.append("text").attr("class","barvalue")
-			.attr("x", c2[p]).attr("y",function(d){ return d.middle+5;})
-			.text(function(d,i){ return d.value ;})
-			.attr("text-anchor","end");
+		// mainbar.append("text").attr("class","barvalue")
+		// 	.attr("x", c2[p]).attr("y",function(d){ return d.middle+5;})
+		// 	.text(function(d,i){ return d.value ;})
+		// 	.style("font-size","10")
+		// 	.attr("text-anchor","end");
 
 		mainbar.append("text").attr("class","barpercent")
-			.attr("x", c3[p]).attr("y",function(d){ return d.middle+5;})
+			.attr("x", c1[p]).attr("y",function(d){ return d.middle+20;})
 			.text(function(d,i){ return "( "+Math.round(100*d.percent)+"%)" ;})
-			.attr("text-anchor","end").style("fill","grey");
+			.style("font-size","12")
+			.attr("text-anchor","start").style("fill","grey");
 
 		d3.select("#"+id).select(".part"+p).select(".subbars")
 			.selectAll(".subbar").data(data.subBars[p]).enter()
@@ -161,7 +166,7 @@ var  biPartite = function()
 
 	function drawHeader(header, id){
 		d3.select("#"+id).append("g").attr("class","header").append("text").text(header[2])
-			.style("font-size","20").attr("x",108).attr("y",-20).style("text-anchor","middle")
+			.style("font-size","16").attr("x",108).attr("y",-30).style("text-anchor","middle")
 			.style("font-weight","bold");
 
 		[0,1].forEach(function(d){
@@ -170,7 +175,7 @@ var  biPartite = function()
 			h.append("text").text(header[d]).attr("x", (c1[d]-5))
 				.attr("y", -5).style("fill","grey");
 
-			h.append("text").text("Count").attr("x", (c2[d]-10))
+			h.append("text").text("Percent").attr("x", (c2[d]-10))
 				.attr("y", -5).style("fill","grey");
 
 			h.append("line").attr("x1",c1[d]-10).attr("y1", -2)
@@ -194,11 +199,11 @@ var  biPartite = function()
 		mainbar.select(".barlabel").transition().duration(500)
 			.attr("y",function(d){ return d.middle+5;});
 
-		mainbar.select(".barvalue").transition().duration(500)
-			.attr("y",function(d){ return d.middle+5;}).text(function(d,i){ return d.value ;});
+		// mainbar.select(".barvalue").transition().duration(500)
+		// 	.attr("y",function(d){ return d.middle+5;}).text(function(d,i){ return d.value ;});
 
 		mainbar.select(".barpercent").transition().duration(500)
-			.attr("y",function(d){ return d.middle+5;})
+			.attr("y",function(d){ return d.middle+20;})
 			.text(function(d,i){ return "( "+Math.round(100*d.percent)+"%)" ;});
 
 		d3.select("#"+id).select(".part"+p).select(".subbars")
@@ -246,6 +251,7 @@ var  biPartite = function()
 		});
 	}
 
+  // pick element
 	bP.selectSegment = function(data, m, s){
 		data.forEach(function(k){
 			var newdata =  {keys:[], data:[]};
@@ -264,7 +270,7 @@ var  biPartite = function()
 
 			selectedBar.select(".mainrect").style("stroke-opacity",1);
 			selectedBar.select(".barlabel").style('font-weight','bold');
-			selectedBar.select(".barvalue").style('font-weight','bold');
+			//selectedBar.select(".barvalue").style('font-weight','bold');
 			selectedBar.select(".barpercent").style('font-weight','bold');
 		});
 	}
@@ -278,7 +284,7 @@ var  biPartite = function()
 
 			selectedBar.select(".mainrect").style("stroke-opacity",0);
 			selectedBar.select(".barlabel").style('font-weight','normal');
-			selectedBar.select(".barvalue").style('font-weight','normal');
+			//selectedBar.select(".barvalue").style('font-weight','normal');
 			selectedBar.select(".barpercent").style('font-weight','normal');
 		});
 	}

@@ -4,13 +4,13 @@
   background-size: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
+  font-size: 25px;
 }
 
 .visDiv {
   background-color: rgba(255, 255, 255, 0.8);
   padding-top: 40px;
 }
-
 
 .arc text {
   font: 10px sans-serif;
@@ -22,18 +22,18 @@
 }
 
 .toolTip {
-    position: absolute;
-    display: none;
-    width: auto;
-    height: auto;
-    background: none repeat scroll 0 0 white;
-    border: 0 none;
-    border-radius: 8px 8px 8px 8px;
-    box-shadow: -3px 3px 15px #888888;
-    color: black;
-    font: 12px sans-serif;
-    padding: 5px;
-    text-align: center;
+  position: absolute;
+  display: none;
+  width: auto;
+  height: auto;
+  background: none repeat scroll 0 0 white;
+  border: 0 none;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: -3px 3px 15px #888888;
+  color: black;
+  font: 12px sans-serif;
+  padding: 5px;
+  text-align: center;
 }
 
 #bg1 {
@@ -56,35 +56,55 @@
   background-color: #ffffcc;
 }
 
+.img1 {
+  max-height: 200px;
+}
+
+.last {
+  background-color: #063340;
+  color: white;
+}
+
 p {
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-a{
-  font-family: "Comic Sans MS", cursive, sans-serif;
-}
-h1{
-   font-family: "Comic Sans MS", cursive, sans-serif;
-}
-
-h2{
+a {
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-h3{
-font-family: "Comic Sans MS", cursive, sans-serif;
+h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-h4{
- font-size: 16px;
- font-family: "Comic Sans MS", cursive, sans-serif;
+h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-h5{
- font-family: "Comic Sans MS", cursive, sans-serif;
+h3 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
-h6{
+h4 {
+  font-size: 16px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h5 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h6 {
   font-weight: bold;
   font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#vis_1 {
+  position: relative;
+}
+
+#vis_1_donut {
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
 }
