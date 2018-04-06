@@ -38,7 +38,7 @@ d3.json("data/vis_4_1.json", function(v4_data_1) {
     }, {
       data: plot.partData(v4_data_2, 2),
       id: 'TechResponsibilityFuture',
-      header: ["Tech", "Attitude", "How do you think about a connected future?"]
+      header: ["Tech", "Attitude", "How do you think about a world highly connected to internet?"]
     }];
     plot.draw(data);
   });
