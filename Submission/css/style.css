@@ -12,6 +12,31 @@
   padding-top: 40px;
 }
 
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+.toolTip {
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    font: 12px sans-serif;
+    padding: 5px;
+    text-align: center;
+}
+
 #bg1 {
   padding: 2%;
   background-color: #66a3ff;
@@ -29,7 +54,7 @@
 
 #bg4 {
   padding: 2%;
-  background-color: #ffa366;
+  background-color: #ffffcc;
 }
 
 .img1 {
@@ -42,5 +67,37 @@
 .last{
 	background-color: #063340;
 	color: white;
-	
+}
+
+p {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+a{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+h1{
+   font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h2{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h3{
+font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h4{
+ font-size: 16px;
+ font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h5{
+ font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h6{
+  font-weight: bold;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }

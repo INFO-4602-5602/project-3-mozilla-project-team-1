@@ -1,0 +1,294 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/6.9.1/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   'js-d3-complex-charts' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData js-d3-complex-charts
+8 silly fetchNamedPackageData js-d3-complex-charts
+9 silly mapToRegistry name js-d3-complex-charts
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'js-d3-complex-charts',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'js-d3-complex-charts',
+12 silly mapToRegistry   name: 'js-d3-complex-charts',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/js-d3-complex-charts
+14 verbose request uri https://registry.npmjs.org/js-d3-complex-charts
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 2:24:59 PM
+17 verbose request id 5f9f57f8c3463603
+18 http request GET https://registry.npmjs.org/js-d3-complex-charts
+19 http 200 https://registry.npmjs.org/js-d3-complex-charts
+20 verbose headers { 'content-type': 'application/json; charset=UTF-8',
+20 verbose headers   server: 'UploadServer',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'last-modified': 'Thu, 21 Sep 2017 18:54:35 GMT',
+20 verbose headers   etag: '"59c40aeb-1015"',
+20 verbose headers   'x-npm-region': 'US-Central',
+20 verbose headers   'content-encoding': 'gzip',
+20 verbose headers   'content-length': '1336',
+20 verbose headers   'accept-ranges': 'bytes',
+20 verbose headers   date: 'Wed, 04 Apr 2018 20:24:59 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   age: '0',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-den19629-DEN',
+20 verbose headers   'x-cache': 'MISS',
+20 verbose headers   'x-cache-hits': '0',
+20 verbose headers   'x-timer': 'S1522873499.335121,VS0,VE120',
+20 verbose headers   vary: 'Accept-Encoding, Accept' }
+21 silly get cb [ 200,
+21 silly get   { 'content-type': 'application/json; charset=UTF-8',
+21 silly get     server: 'UploadServer',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'last-modified': 'Thu, 21 Sep 2017 18:54:35 GMT',
+21 silly get     etag: '"59c40aeb-1015"',
+21 silly get     'x-npm-region': 'US-Central',
+21 silly get     'content-encoding': 'gzip',
+21 silly get     'content-length': '1336',
+21 silly get     'accept-ranges': 'bytes',
+21 silly get     date: 'Wed, 04 Apr 2018 20:24:59 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     age: '0',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-den19629-DEN',
+21 silly get     'x-cache': 'MISS',
+21 silly get     'x-cache-hits': '0',
+21 silly get     'x-timer': 'S1522873499.335121,VS0,VE120',
+21 silly get     vary: 'Accept-Encoding, Accept' } ]
+22 verbose get saving js-d3-complex-charts to /Users/yawen/.npm/registry.npmjs.org/js-d3-complex-charts/.cache.json
+23 verbose correctMkdir /Users/yawen/.npm correctMkdir not in flight; initializing
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly resolveWithNewModule js-d3-complex-charts@1.0.1 checking installable status
+37 silly cache add args [ 'js-d3-complex-charts', null ]
+38 verbose cache add spec js-d3-complex-charts
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'js-d3-complex-charts',
+39 silly cache add   scope: null,
+39 silly cache add   escapedName: 'js-d3-complex-charts',
+39 silly cache add   name: 'js-d3-complex-charts',
+39 silly cache add   rawSpec: '',
+39 silly cache add   spec: 'latest',
+39 silly cache add   type: 'tag' }
+40 silly addNamed js-d3-complex-charts@latest
+41 verbose addNamed "latest" is being treated as a dist-tag for js-d3-complex-charts
+42 info addNameTag [ 'js-d3-complex-charts', 'latest' ]
+43 silly mapToRegistry name js-d3-complex-charts
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry data Result {
+46 silly mapToRegistry   raw: 'js-d3-complex-charts',
+46 silly mapToRegistry   scope: null,
+46 silly mapToRegistry   escapedName: 'js-d3-complex-charts',
+46 silly mapToRegistry   name: 'js-d3-complex-charts',
+46 silly mapToRegistry   rawSpec: '',
+46 silly mapToRegistry   spec: 'latest',
+46 silly mapToRegistry   type: 'tag' }
+47 silly mapToRegistry uri https://registry.npmjs.org/js-d3-complex-charts
+48 verbose addNameTag registry:https://registry.npmjs.org/js-d3-complex-charts not in flight; fetching
+49 verbose get https://registry.npmjs.org/js-d3-complex-charts not expired, no request
+50 silly addNameTag next cb for js-d3-complex-charts with tag latest
+51 silly addNamed js-d3-complex-charts@1.0.1
+52 verbose addNamed "1.0.1" is a plain semver version for js-d3-complex-charts
+53 silly mapToRegistry name js-d3-complex-charts
+54 silly mapToRegistry using default registry
+55 silly mapToRegistry registry https://registry.npmjs.org/
+56 silly mapToRegistry data Result {
+56 silly mapToRegistry   raw: 'js-d3-complex-charts',
+56 silly mapToRegistry   scope: null,
+56 silly mapToRegistry   escapedName: 'js-d3-complex-charts',
+56 silly mapToRegistry   name: 'js-d3-complex-charts',
+56 silly mapToRegistry   rawSpec: '',
+56 silly mapToRegistry   spec: 'latest',
+56 silly mapToRegistry   type: 'tag' }
+57 silly mapToRegistry uri https://registry.npmjs.org/js-d3-complex-charts
+58 verbose addRemoteTarball https://registry.npmjs.org/js-d3-complex-charts/-/js-d3-complex-charts-1.0.1.tgz not in flight; adding
+59 verbose addRemoteTarball [ 'https://registry.npmjs.org/js-d3-complex-charts/-/js-d3-complex-charts-1.0.1.tgz',
+59 verbose addRemoteTarball   'e551a2085a79bf466ff7b40eaa205be8eddbb3ec' ]
+60 info retry fetch attempt 1 at 2:24:59 PM
+61 info attempt registry request try #1 at 2:24:59 PM
+62 http fetch GET https://registry.npmjs.org/js-d3-complex-charts/-/js-d3-complex-charts-1.0.1.tgz
+63 http fetch 200 https://registry.npmjs.org/js-d3-complex-charts/-/js-d3-complex-charts-1.0.1.tgz
+64 silly fetchAndShaCheck shasum e551a2085a79bf466ff7b40eaa205be8eddbb3ec
+65 verbose addTmpTarball /var/folders/28/ts30m70n0ms4d12251_nryb00000gn/T/npm-5713-3fe88cde/registry.npmjs.org/js-d3-complex-charts/-/js-d3-complex-charts-1.0.1.tgz not in flight; adding
+66 verbose addTmpTarball already have metadata; skipping unpack for js-d3-complex-charts@1.0.1
+67 verbose correctMkdir /Users/yawen/.npm correctMkdir not in flight; initializing
+68 silly cache afterAdd js-d3-complex-charts@1.0.1
+69 verbose afterAdd /Users/yawen/.npm/js-d3-complex-charts/1.0.1/package/package.json not in flight; writing
+70 verbose correctMkdir /Users/yawen/.npm correctMkdir not in flight; initializing
+71 verbose afterAdd /Users/yawen/.npm/js-d3-complex-charts/1.0.1/package/package.json written
+72 silly loadAllDepsIntoIdealTree Finishing
+73 silly loadIdealTree Finishing
+74 silly currentTree project-3-mozilla-project-team-1
+75 silly idealTree project-3-mozilla-project-team-1
+75 silly idealTree └── js-d3-complex-charts@1.0.1
+76 silly generateActionsToTake Starting
+77 silly install generateActionsToTake
+78 silly generateActionsToTake Finishing
+79 silly diffTrees action count 1
+80 silly diffTrees add js-d3-complex-charts@1.0.1
+81 silly decomposeActions action count 8
+82 silly decomposeActions fetch js-d3-complex-charts@1.0.1
+83 silly decomposeActions extract js-d3-complex-charts@1.0.1
+84 silly decomposeActions test js-d3-complex-charts@1.0.1
+85 silly decomposeActions preinstall js-d3-complex-charts@1.0.1
+86 silly decomposeActions build js-d3-complex-charts@1.0.1
+87 silly decomposeActions install js-d3-complex-charts@1.0.1
+88 silly decomposeActions postinstall js-d3-complex-charts@1.0.1
+89 silly decomposeActions finalize js-d3-complex-charts@1.0.1
+90 silly runTopLevelLifecycles Starting
+91 silly executeActions Starting
+92 silly install executeActions
+93 silly doSerial global-install 0
+94 silly doParallel fetch 1
+95 verbose correctMkdir /Users/yawen/.npm/_locks correctMkdir not in flight; initializing
+96 verbose lock using /Users/yawen/.npm/_locks/staging-fbfbe4d7590e8a03.lock for /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/.staging
+97 silly doParallel extract 1
+98 silly extract js-d3-complex-charts@1.0.1
+99 verbose unbuild node_modules/.staging/js-d3-complex-charts-87b199aa
+100 silly gentlyRm /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/.staging/js-d3-complex-charts-87b199aa is being purged from base /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1
+101 verbose gentlyRm don't care about contents; nuking /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/.staging/js-d3-complex-charts-87b199aa
+102 verbose tar unpack /Users/yawen/.npm/js-d3-complex-charts/1.0.1/package.tgz
+103 verbose tar unpacking to /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/.staging/js-d3-complex-charts-87b199aa
+104 silly gentlyRm /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/.staging/js-d3-complex-charts-87b199aa is being purged
+105 verbose gentlyRm don't care about contents; nuking /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/.staging/js-d3-complex-charts-87b199aa
+106 silly gunzTarPerm modes [ '755', '644' ]
+107 silly gunzTarPerm extractEntry package.json
+108 silly gunzTarPerm extractEntry .npmignore
+109 silly gunzTarPerm extractEntry README.md
+110 silly gunzTarPerm extractEntry LICENSE
+111 silly gunzTarPerm extractEntry Gruntfile.js
+112 silly gunzTarPerm extractEntry index.js
+113 silly gunzTarPerm extractEntry build/jsd3.min.js
+114 silly gunzTarPerm extractEntry build/jsd3.min.css
+115 silly gunzTarPerm extractEntry data/concept-map-data.json
+116 silly gunzTarPerm extractEntry data/energy.json
+117 silly gunzTarPerm extractEntry data/flare-imports.json
+118 silly gunzTarPerm extractEntry data/flare.json
+119 silly gunzTarPerm extractEntry data/herograph.json
+120 silly gunzTarPerm extractEntry data/miserables.json
+121 silly gunzTarPerm extractEntry data/readme-flare-imports.json
+122 silly gunzTarPerm extractEntry data/sales_data.json
+123 silly gunzTarPerm extractEntry examples/example-bipartite.html
+124 silly gunzTarPerm extractEntry examples/example-collapsible-tree.html
+125 silly gunzTarPerm extractEntry examples/example-concept-map.html
+126 silly gunzTarPerm extractEntry examples/example-hero-graph.html
+127 silly gunzTarPerm extractEntry examples/example-hierarchical.html
+128 silly gunzTarPerm extractEntry examples/example-hive.html
+129 silly gunzTarPerm extractEntry examples/example-matrix.html
+130 silly gunzTarPerm extractEntry examples/example-sankey.html
+131 silly gunzTarPerm extractEntry .travis.yml
+132 silly gunzTarPerm extractEntry src/biPartite-plot.js
+133 silly gunzTarPerm extractEntry src/collapsible-tree.js
+134 silly gunzTarPerm extractEntry src/packages.js
+135 silly gunzTarPerm extractEntry src/concept-map.js
+136 silly gunzTarPerm extractEntry src/sankey-plot.js
+137 silly gunzTarPerm extractEntry src/matrix-plot.js
+138 silly gunzTarPerm extractEntry src/herograph.js
+139 silly gunzTarPerm extractEntry src/biPartite.js
+140 silly gunzTarPerm extractEntry src/hierarchical-edge-bundling.js
+141 silly gunzTarPerm extractEntry src/hive-plot.js
+142 silly gunzTarPerm extractEntry src/gauge.js
+143 silly gunzTarPerm extractEntry src/sankey.js
+144 silly gunzTarPerm extractEntry src/hive-plot.css
+145 silly gunzTarPerm extractEntry src/matrix-plot.css
+146 silly gunzTarPerm extractEntry src/herograph.css
+147 silly gunzTarPerm extractEntry src/concept-map.css
+148 silly gunzTarPerm extractEntry src/sankey-plot.css
+149 silly gunzTarPerm extractEntry src/collapsible-tree.css
+150 silly gunzTarPerm extractEntry src/hierarchical-edge-bundling.css
+151 silly gunzTarPerm extractEntry third-party-libs/c3.min.js
+152 silly gunzTarPerm extractEntry third-party-libs/d3.min.js
+153 silly gunzTarPerm extractEntry third-party-libs/jquery-2.1.3.min.js
+154 silly gunzTarPerm extractEntry third-party-libs/underscore-min.js
+155 silly gunzTarPerm extractEntry third-party-libs/bootstrap/css/bootstrap-theme.css
+156 silly gunzTarPerm extractEntry third-party-libs/bootstrap/css/bootstrap-theme.css.map
+157 silly gunzTarPerm extractEntry third-party-libs/bootstrap/css/bootstrap-theme.min.css
+158 silly gunzTarPerm extractEntry third-party-libs/bootstrap/css/bootstrap.css
+159 silly gunzTarPerm extractEntry third-party-libs/bootstrap/css/bootstrap.css.map
+160 silly gunzTarPerm extractEntry third-party-libs/bootstrap/css/bootstrap.min.css
+161 silly gunzTarPerm extractEntry third-party-libs/bootstrap/fonts/glyphicons-halflings-regular.eot
+162 silly gunzTarPerm extractEntry third-party-libs/bootstrap/fonts/glyphicons-halflings-regular.svg
+163 silly gunzTarPerm extractEntry third-party-libs/bootstrap/fonts/glyphicons-halflings-regular.ttf
+164 silly gunzTarPerm extractEntry third-party-libs/bootstrap/fonts/glyphicons-halflings-regular.woff
+165 silly gunzTarPerm extractEntry third-party-libs/bootstrap/js/bootstrap.js
+166 silly gunzTarPerm extractEntry third-party-libs/bootstrap/js/bootstrap.min.js
+167 silly gunzTarPerm extractEntry third-party-libs/bootstrap/js/npm.js
+168 silly gunzTarPerm extractEntry third-party-libs/c3.css
+169 silly gunzTarPerm extractEntry third-party-libs/c3.min.css
+170 silly gentlyRm /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/.staging/js-d3-complex-charts-87b199aa/node_modules is being purged
+171 verbose gentlyRm don't care about contents; nuking /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/.staging/js-d3-complex-charts-87b199aa/node_modules
+172 silly doParallel preinstall 1
+173 silly preinstall js-d3-complex-charts@1.0.1 /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/.staging/js-d3-complex-charts-87b199aa
+174 info lifecycle js-d3-complex-charts@1.0.1~preinstall: js-d3-complex-charts@1.0.1
+175 silly lifecycle js-d3-complex-charts@1.0.1~preinstall: no script for preinstall, continuing
+176 silly doReverseSerial remove 0
+177 silly doSerial move 0
+178 silly doSerial finalize 1
+179 silly finalize /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/js-d3-complex-charts
+180 silly doSerial build 1
+181 silly build js-d3-complex-charts@1.0.1
+182 info linkStuff js-d3-complex-charts@1.0.1
+183 silly linkStuff js-d3-complex-charts@1.0.1 has /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules as its parent node_modules
+184 verbose linkBins js-d3-complex-charts@1.0.1
+185 verbose link bins [ { 'js-lrs': './src/jsd3.js' },
+185 verbose link bins   '/Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/.bin',
+185 verbose link bins   false ]
+186 verbose linkMans js-d3-complex-charts@1.0.1
+187 verbose unlock done using /Users/yawen/.npm/_locks/staging-fbfbe4d7590e8a03.lock for /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/.staging
+188 silly rollbackFailedOptional Starting
+189 silly rollbackFailedOptional Finishing
+190 silly runTopLevelLifecycles Finishing
+191 silly install printInstalled
+192 warn enoent ENOENT: no such file or directory, open '/Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/package.json'
+193 verbose enoent ENOENT: no such file or directory, open '/Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/package.json'
+193 verbose enoent This is most likely not a problem with npm itself
+193 verbose enoent and is related to npm not being able to find a file.
+194 warn project-3-mozilla-project-team-1 No description
+195 verbose If you need help, you may report this error at:
+195 verbose     <https://github.com/npm/npm/issues>
+196 warn project-3-mozilla-project-team-1 No repository field.
+197 verbose If you need help, you may report this error at:
+197 verbose     <https://github.com/npm/npm/issues>
+198 warn project-3-mozilla-project-team-1 No README data
+199 verbose If you need help, you may report this error at:
+199 verbose     <https://github.com/npm/npm/issues>
+200 warn project-3-mozilla-project-team-1 No license field.
+201 verbose If you need help, you may report this error at:
+201 verbose     <https://github.com/npm/npm/issues>
+202 verbose stack Error: ENOENT: no such file or directory, chmod '/Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/js-d3-complex-charts/src/jsd3.js'
+202 verbose stack     at Error (native)
+203 verbose cwd /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1
+204 error Darwin 17.4.0
+205 error argv "/usr/local/Cellar/node/6.9.1/bin/node" "/usr/local/bin/npm" "i" "js-d3-complex-charts"
+206 error node v6.9.1
+207 error npm  v3.10.8
+208 error path /Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/js-d3-complex-charts/src/jsd3.js
+209 error code ENOENT
+210 error errno -2
+211 error syscall chmod
+212 error enoent ENOENT: no such file or directory, chmod '/Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/js-d3-complex-charts/src/jsd3.js'
+213 error enoent ENOENT: no such file or directory, chmod '/Users/yawen/Google Drive/S18 - Visualization/Project/project-3-mozilla-project-team-1/node_modules/js-d3-complex-charts/src/jsd3.js'
+213 error enoent This is most likely not a problem with npm itself
+213 error enoent and is related to npm not being able to find a file.
+214 verbose exit [ -2, true ]

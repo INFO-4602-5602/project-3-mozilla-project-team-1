@@ -54,12 +54,29 @@
     </div>
 
     <!-- Visualization #2 -->
-    <div id="bg2">
-      <div class="container visDiv">
-        <h2 class="text-center">Chart 2</h2>
+    <div class="vis container " id="bg2">
+      <h2 class="text-center">Vis 2</h2>
+      <hr class="my-3">
+      <div class="row">
+        <div class="col-3 border-right">
+          <h3 class="text-center">Vis2 Description</h3>
+          <h4>
+          <br>We use color depth to indicate amount.</br></h4><h6> Click on pie chart to zoom in; click on center to zoom out.</h6>
+          <h6><br>Conclusions:</br><h6>
+          <h4><ul><li>Number of male students are much more than female students no matter which year.<h6>(first layer)</h6></li>
+          </ul>
+          <h4><ul><li>Number of students increased sharply after 2010 no matter which gender.<h6>(second layer after zooming in)</h6></li></ul>
+          <h4><ul><li>White, asian and hispanics are top dominated races no matter which year which gender.<h6>(third layer after zooming in)</h6></li></ul>
 
+
+        </div>
+        <div class="col-9  ">
+          <h3 class="text-center">Vis 2</h3>
+          <div class="charts" id="chart_2">
+
+          </div>
+        </div>
       </div>
-
     </div>
 
     <!-- Visualization #3 -->
@@ -72,9 +89,10 @@
     </div>
 
     <!-- Visualization #4 -->
-    <div id="bg4">
+    <div id="bg4" class="bipartite">
       <div class="container visDiv">
         <h2 class="text-center">Chart 4</h2>
+        
 
       </div>
 
@@ -88,22 +106,25 @@
     <p class = "text-center"><span class="mr-5">Jiawen Liu</span><span class="mr-5">Keke Wu</span><span class="mr-5">Wei Miao</span><span class="mr-5">Xu Han</span><span class="mr-5">Yawen Zhang</span> </p>
   </footer>
 
-
   <!-- bootstrap js -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
   <!-- d3.js -->
   <script src="http://d3js.org/d3.v4.min.js"></script>
+  <script src="js/d3v3.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+  <!-- bipartite.js -->
+  <script type="text/javascript" src="js/biPartite.js"></script>
 
   <!-- Visualization scripts -->
   <script type="text/javascript" src="js/vis_1.js"></script>
-  <script type="text/javascript" src="js/vis_2.js"></script>
+  <script type="text/javascript" src="js/vis2.js"></script>
   <script type="text/javascript" src="js/vis_3.js"></script>
   <script type="text/javascript" src="js/vis_4.js"></script>
+
 </body>
 
 </html>
