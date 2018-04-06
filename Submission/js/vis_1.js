@@ -27,7 +27,7 @@ var world_color = d3.scaleThreshold()
   .domain(d3.range(0, 10))
   .range(d3.schemeOranges[9]);
 
-var path = d3.geoPath();
+var v1_path = d3.geoPath();
 
 var v1_svg = d3.select("#vis_1")
   .append("svg")
@@ -40,7 +40,7 @@ var projection = d3.geoMercator()
   .scale(130)
   .translate([width / 2, height / 1.5]);
 
-var path = d3.geoPath().projection(projection);
+var v1_path = d3.geoPath().projection(projection);
 
 v1_svg.call(tip);
 
@@ -77,7 +77,7 @@ function ready(error, world, tech) {
     .selectAll("path")
     .data(world.features)
     .enter().append("path")
-    .attr("d", path)
+    .attr("d", v1_path)
     .style("fill", function(d) {
       var rate = 0;
       if (techRatioById[d.id] !== null && techRatioById[d.id] !== undefined) {
@@ -117,7 +117,7 @@ function ready(error, world, tech) {
       return a.id !== b.id;
     }))
     .attr("class", "names")
-    .attr("d", path);
+    .attr("d", v1_path);
 }
 
 function v1DataChange() {
@@ -199,7 +199,7 @@ function donutChart() {
       })
       .sort(null);
 
-    var path = vd_svg.selectAll('path')
+    var vd_path = vd_svg.selectAll('path')
       .data(pie(dataset))
       .enter()
       .append('path')
