@@ -1,10 +1,18 @@
-**This is INFO-5602's project 2 by Team 1**
+**This is INFO-5602's project 3 by Team 1**
 <br></br>Team member:  Keke Wu, Wei Miao, Xu Han, Yawen Zhang, Jiawen Liu
-
+<br><br>
+**Click this link to view our project: http://creative.colorado.edu/~wemi4704/projects/vis/pro3/**
 
 **Brief description of our project(What):**
 <br></br>
-This project explores Mozilla survey dataset, which collected people's perceptions towards a highly connected world. All of our four visualizations focus on discovering how people's technical level or geolocation (e.g., country) influence their perceptions about technology. Besides the basic requirements, we also satisfied additional requirements: 1) Semantic Zoom (showing detailed proportion of tech level of each country in visualization 1), 2) Missing Data (we treat fields with missing data as NaN and they are not included in the statistics), 3) Coordinated Views (in visualization 2 & 4), 4) Style (we applied consistent division for each chart). 
+This project explores Mozilla survey dataset, which collected people's perceptions towards a highly connected world. All of our four visualizations focus on discovering how people's technical level or geolocation (e.g., country) influence their perceptions about technology. 
+<br><br>
+Besides the basic requirements, we also satisfied additional requirements: 
+* Semantic Zoom: showing detailed proportion of tech level of each country in visualization 1 & visualization 2 shows detailed proportion of worries about future in 3 levels: global countries, different continent countries, different countries; 
+* Missing Data: we treat fields with missing data as NaN and they are not included in the statistics; 
+* Coordinated Views: demonstrated in visualization 2 & 4;
+* Perceptually-Informed Design: we use color saturation to integrate perceputlly-informed design concept in visualization 1 & 3. The variation of color saturation makes our data visually distinguishable. 
+* Style (we applied consistent division for each chart). 
 <br></br>
 
 **Brief description of Visualization 1:**
@@ -23,15 +31,18 @@ This project explores Mozilla survey dataset, which collected people's perceptio
 **Brief description of Visualization 2:**
 <br></br>
 * What does it show:
-     * The relationship between tech level and people's future concerns of technology by countries.
-     * An coordinated pie chart and pie chart displays hierarchical information on the percentage of different concerns.
+     * People's future concerns of technology by tech levels and countries.
+     * An coordinated pie chart and bar chart displays hierarchical information on the percentage of different concerns.
 * Interactions part:
      * Mouseover the pie chart to select from  and highlight different tech levels, continents and countries.
      * Get the coordinated bar chart indicating future concerns from a global view, a continent view, and a detailed country view.
 * Conclusions:
      * Privacy loss is the biggest future concern among all four tech levels participants.
+     * Privacy loss, lose touch and less safe are the top 3 concerns among all the countries.
+     * Oceania is the continent that cares the privacy issue most.
      * Except for Ultrad Nerd, the biggest concerns for Italy users is lose touch.
 <br></br>
+* Note: we select top 3 countries with most responses count for each continent.
 
 
 **Brief description of Visualization 3:**
@@ -46,6 +57,7 @@ This project explores Mozilla survey dataset, which collected people's perceptio
      * Price and Features are top 2 factors that influcing people's buying behavior for most countires.
      * People in France and Belgium consider Convenience as the most important factor when buying new technology devices.
      * People's preferences on other factors such as Safety, Security, User Reviews,Privacy don't have distinct differences.
+* Note: we select top 19 countries with most responses count.
 
 **Brief description of Visualization 4:**
 <br></br>
@@ -76,13 +88,13 @@ This project explores Mozilla survey dataset, which collected people's perceptio
 <br>Wei Miao: Viz1 | Framework</br>
 <br>Xu Han: Viz2 | Data Processing  </br>
 <br>Yawen Zhang: Viz4 | Data Processing  </br>
-<br>Jiawen Liu: Viz Prototype | Styling</br>
+<br>Jiawen Liu: Styling</br>
 
 <br></br>
 
 **How to run our project:**
-<br>We used python for data processing and d3 for data visualiazation.</br>
-<br>1) open terminal</br>
-<br>2) navigate to the project folder</br>
-<br>3) python -m SimpleHTTPServer</br>
-<br>4) open http://localhost:8000 in browser
+
+click this like to view our project:
+http://creative.colorado.edu/~wemi4704/projects/vis/pro3/
+
+
