@@ -95,7 +95,7 @@ Besides the basic requirements, we also satisfied additional requirements:
 
 **How to run our project:**
 
-click this like to view our project:
+Click this link to view our project:
 http://creative.colorado.edu/~wemi4704/projects/vis/pro3/
 
 
