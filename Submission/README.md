@@ -1,7 +1,13 @@
 **This is INFO-5602's project 3 by Team 1**
 <br></br>Team member:  Keke Wu, Wei Miao, Xu Han, Yawen Zhang, Jiawen Liu
+<<<<<<< HEAD
 <br><br>
 **Click this link to view our project: http://creative.colorado.edu/~wemi4704/projects/vis/pro3/**
+=======
+
+**Preview**
+http://creative.colorado.edu/~wemi4704/projects/vis/pro3/
+>>>>>>> 2a7022ce1167c798f355f41a6cf1dcbdc3fe57a6
 
 **Brief description of our project(What):**
 <br></br>
