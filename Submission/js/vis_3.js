@@ -24,7 +24,7 @@ var width = 1050 - margin.right - margin.left,
 var colorScale;
 
 colorHold=["#feebe2","#fcc5c0","#fa9fb5","#f768a1","#c51b8a","#ae017e"]
-colorLText=["< -66%","-66% to -33%","-33% to 0%","0% to 33%","33% to 66%","> 66%"]
+colorLText=["< 3.3%","3.3% to 6.7%","6.7% to 10%","10% to 13%","13% to 15%","> 15%"]
 
 function bandClassifier(val,multiplier)
 {
@@ -91,6 +91,7 @@ var mean=window.mean(data.map(function(d){return +d.value}));
 //setting percentage change for value w.r.t average
 data.forEach(function(d){
     d.perChange=(d.value-mean)/mean
+    //d.perChange = d.value
 })
 
 colorScale = d3.scaleOrdinal()
@@ -141,7 +142,7 @@ var cells = svg.selectAll('rect')
         .style("top",(d3.event.pageY-30)+"px").style("left",(d3.event.pageX+20)+"px");
 
         //console.log(d3.mouse(this)[0])
-        tooltip.select("div").html("<strong>"+d.product+"</strong><br/> "+(+d.value).toFixed(2))
+        tooltip.select("div").html("<strong>"+d.product+"</strong><br/> "+(+d.value*100).toFixed(2)+"%")
 
     })
 
